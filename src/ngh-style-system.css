@@ -1,0 +1,1274 @@
+/*
+* ====================================================================================================
+* NGH STYLE SYSTEM
+* GLOBAL STYLES
+* ====================================================================================================
+*/
+/*
+* ----------------------------------------------------------------------------------------------------
+* RESET
+* ----------------------------------------------------------------------------------------------------
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* FLUID RESPONSIVE
+* ----------------------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* BREAKPOINTS CASCADE (MOBILE-FIRST)
+* ----------------------------------------------------------------------------------------------------
+*/
+/*
+* 1. mobile = 0rem (base)
+* 2. mobile-landscape = 35.5rem | ~~568px
+* 3. tablet = 48rem | ~~768px
+* 4. desktop = 64rem | ~~1024px
+*/
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* PAGE STRUCTURE
+* ----------------------------------------------------------------------------------------------------
+*/
+/* -------------------------VARIABLES------------------------- */
+:root {
+  /* PADDING-GLOBAL */
+  --padding-global-mobile: 1.25rem;
+  --padding-global-tablet: 3.5rem;
+
+  /* PADDING-SECTION-SMALL */
+  --padding-section-small-mobile: 2rem;
+  --padding-section-small-tablet: 3rem;
+
+  /* PADDING-SECTION-MEDIUM */
+  --padding-section-medium-mobile: 3rem;
+  --padding-section-medium-tablet: 4rem;
+  --padding-section-medium-desktop: 5rem;
+
+  /* PADDING-SECTION-LARGE */
+  --padding-section-large-mobile: 4rem;
+  --padding-section-large-tablet: 6rem;
+  --padding-section-large-desktop: 8rem;
+
+  /* CONTAINER-[SIZE] **NOT RESPONSIVE */
+  --container-small: 48rem;
+  --container-medium: 64rem;
+  --container-large: 80rem;
+
+  /* BACKGROUND-COLOR-[TYPE] */
+  --background-color-primary: #161616;
+  --background-color-secondary: #262626;
+  --background-color-tertiary: #2e2e2e;
+  --background-color-quaternary: #f4f4f4;
+
+  /* TEXT-COLOR-[TYPE] */
+  --text-color-primary: #f4f4f4;
+  --text-color-inverse: #161616;
+
+  /* BUTTON-COLOR-[TYPE] */
+  --button-primary: #0f62fe;
+  --button-primary-hover: #0353e9;
+  --button-primary-pressed: #002d9c;
+  --button-secondary: #6f6f6f;
+  --button-secondary-hover: #606060;
+  --button-secondary-pressed: #393939;
+
+  /* BORDER-ACCENT */
+  --border-accent: #4589ff;
+
+  /* NONSPECIFIC */
+  --color-dark: #000;
+  --color-light: #fff;
+}
+
+/* -------------------------BODY------------------------- */
+body {
+  background-color: #161616;
+  color: #f4f4f4;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* -------------------------PADDING-GLOBAL------------------------- */
+.padding-global {
+  padding-inline: var(--padding-global-mobile);
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-global {
+    padding-inline: var(--padding-global-tablet);
+  }
+}
+
+.no-padding-right {
+  padding-right: 0rem !important;
+}
+
+.no-padding-left {
+  padding-left: 0rem !important;
+}
+
+/* -------------------------PADDING-SECTION-SMALL------------------------- */
+.padding-section-small {
+  padding-block: var(--padding-section-small-mobile);
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-section-small {
+    padding-block: var(--padding-section-small-tablet);
+  }
+}
+
+/* -------------------------PADDING-SECTION-MEDIUM------------------------- */
+.padding-section-medium {
+  padding-block: var(--padding-section-medium-mobile);
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-section-medium {
+    padding-block: var(--padding-section-medium-tablet);
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-section-medium {
+    padding-block: var(--padding-section-medium-desktop);
+  }
+}
+
+/* -------------------------PADDING-SECTION-LARGE------------------------- */
+.padding-section-large {
+  padding-block: var(--padding-section-large-mobile);
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-section-large {
+    padding-block: var(--padding-section-large-tablet);
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-section-large {
+    padding-block: var(--padding-section-large-desktop);
+  }
+}
+
+/* -------------------------CONTAINER-SMALL **NOT RESPONSIVE------------------------- */
+.container-small {
+  width: 100%;
+  margin-inline: auto !important;
+  max-width: var(--container-small);
+}
+
+/* -------------------------CONTAINER-MEDIUM **NOT RESPONSIVE------------------------- */
+.container-medium {
+  width: 100%;
+  margin-inline: auto !important;
+  max-width: var(--container-medium);
+}
+
+/* -------------------------CONTAINER-LARGE **NOT RESPONSIVE------------------------- */
+.container-large {
+  width: 100%;
+  margin-inline: auto !important;
+  max-width: var(--container-large);
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* PADDING
+* ----------------------------------------------------------------------------------------------------
+*/
+.padding-inline {
+  padding-block: 0rem !important;
+}
+
+.padding-block {
+  padding-inline: 0rem !important;
+}
+
+.padding-left {
+  /* padding-left: 0rem !important; */
+  padding-right: 0rem !important;
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.padding-right {
+  padding-left: 0rem !important;
+  /* padding-right: 0rem !important; */
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.padding-top {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+  /* padding-top: 0rem !important; */
+  padding-bottom: 0rem !important;
+}
+
+.padding-bottom {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+  padding-top: 0rem !important;
+  /* padding-bottom: 0rem !important; */
+}
+
+.padding-tiny {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.padding-xxsmall {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.padding-xsmall {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.padding-small {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* -------------------------PADDING-MEDIUM------------------------- */
+.padding-medium {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-medium {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-medium {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* -------------------------PADDING-LARGE------------------------- */
+.padding-large {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-large {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-large {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* -------------------------PADDING-XLARGE------------------------- */
+.padding-xlarge {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-xlarge {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-xlarge {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* -------------------------PADDING-XXLARGE------------------------- */
+.padding-xxlarge {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-xxlarge {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-xxlarge {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* -------------------------PADDING-HUGE------------------------- */
+.padding-huge {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-huge {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-huge {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* -------------------------PADDING-XHUGE------------------------- */
+.padding-xhuge {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-xhuge {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-xhuge {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* -------------------------PADDING-XXHUGE------------------------- */
+.padding-xxhuge {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .padding-xxhuge {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .padding-xxhuge {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+/* -------------------------PADDING-0------------------------- */
+.padding-0 {
+  padding: 0rem !important;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* MARGIN
+* ----------------------------------------------------------------------------------------------------
+*/
+.margin-inline {
+  margin-inline: 0rem !important;
+}
+
+.margin-block {
+  margin-block: 0rem !important;
+}
+
+.margin-top {
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+  /* margin-top: 0rem !important; */
+  margin-bottom: 0rem !important;
+}
+
+.margin-bottom {
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+  margin-top: 0rem !important;
+  /* margin-bottom: 0rem !important; */
+}
+
+.margin-left {
+  /* margin-left: 0rem !important; */
+  margin-right: 0rem !important;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.margin-right {
+  margin-left: 0rem !important;
+  /* margin-right: 0rem !important; */
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.margin-tiny {
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.margin-xxsmall {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.margin-xsmall {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.margin-small {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------MARGIN-MEDIUM------------------------- */
+.margin-medium {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-medium {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-medium {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* -------------------------MARGIN-LARGE------------------------- */
+.margin-large {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-large {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-large {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* -------------------------MARGIN-XLARGE------------------------- */
+.margin-xlarge {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-xlarge {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-xlarge {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* -------------------------MARGIN-XXLARGE------------------------- */
+.margin-xxlarge {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-xxlarge {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-xxlarge {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/* -------------------------MARGIN-HUGE------------------------- */
+.margin-huge {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-huge {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-huge {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+/* -------------------------MARGIN-XHUGE------------------------- */
+.margin-xhuge {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-xhuge {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-xhuge {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* -------------------------MARGIN-XXHUGE------------------------- */
+.margin-xxhuge {
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .margin-xxhuge {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .margin-xxhuge {
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+  }
+}
+
+/* -------------------------MARGIN-0------------------------- */
+.margin-0 {
+  margin: 0rem !important;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* SPACER
+* ----------------------------------------------------------------------------------------------------
+*/
+.spacer-tiny {
+  width: 100%;
+  padding-top: 0.125rem;
+}
+
+.spacer-xxsmall {
+  width: 100%;
+  padding-top: 0.25rem;
+}
+
+.spacer-xsmall {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.spacer-small {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.spacer-medium {
+  width: 100%;
+  padding-top: 1.25rem;
+}
+
+.spacer-large {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.spacer-xlarge {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.spacer-xxlarge {
+  width: 100%;
+  padding-top: 3rem;
+}
+
+/* -------------------------SPACER-HUGE------------------------- */
+.spacer-huge {
+  width: 100%;
+  padding-top: 3.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .spacer-huge {
+    padding-top: 5rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .spacer-huge {
+    padding-top: 6rem;
+  }
+}
+
+/* -------------------------SPACER-XHUGE------------------------- */
+.spacer-xhuge {
+  width: 100%;
+  padding-top: 4rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .spacer-xhuge {
+    padding-top: 6rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .spacer-xhuge {
+    padding-top: 8rem;
+  }
+}
+
+/* -------------------------SPACER-XXHUGE------------------------- */
+.spacer-xxhuge {
+  width: 100%;
+  padding-top: 4.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .spacer-xxhuge {
+    padding-top: 8rem;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .spacer-xxhuge {
+    padding-top: 12rem;
+  }
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* HEADING
+* ----------------------------------------------------------------------------------------------------
+*/
+/* -------------------------H1------------------------- */
+h1,
+.heading-style-h1 {
+  font-size: 2.5rem;
+  /* font-weight: 700; */
+  font-weight: 300;
+  /* line-height: 1.1; */
+  line-height: 1.2;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h1,
+  .heading-style-h1 {
+    font-size: 4rem;
+  }
+}
+
+/* -------------------------H2------------------------- */
+h2,
+.heading-style-h2 {
+  font-size: 2rem;
+  /* font-weight: 700; */
+  font-weight: 400;
+  line-height: 1.2;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h2,
+  .heading-style-h2 {
+    font-size: 3rem;
+  }
+}
+
+/* -------------------------H3------------------------- */
+h3,
+.heading-style-h3 {
+  font-size: 1.5rem;
+  /* font-weight: 700; */
+  font-weight: 400;
+  /* line-height: 1.2; */
+  line-height: 1.5;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h3,
+  .heading-style-h3 {
+    font-size: 2rem;
+  }
+}
+
+/* -------------------------H4------------------------- */
+h4,
+.heading-style-h4 {
+  font-size: 1rem;
+  /* font-weight: 700; */
+  font-weight: 400;
+  /* line-height: 1.4; */
+  line-height: 1.5;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h4,
+  .heading-style-h4 {
+    font-size: 1.5rem;
+  }
+}
+
+/* -------------------------H5------------------------- */
+h5,
+.heading-style-h5 {
+  font-size: 0.875rem;
+  /* font-weight: 700; */
+  font-weight: 400;
+  line-height: 1.5;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h5,
+  .heading-style-h5 {
+    font-size: 1.25rem;
+  }
+}
+
+/* -------------------------H6------------------------- */
+h6,
+.heading-style-h6 {
+  font-size: 0.75rem;
+  /* font-weight: 700; */
+  font-weight: 400;
+  line-height: 1.5;
+  margin-block: 0rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+
+  h6,
+  .heading-style-h6 {
+    font-size: 1rem;
+  }
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* TEXT SIZE
+* ----------------------------------------------------------------------------------------------------
+*/
+.text-size-tiny {
+  font-size: 0.75rem;
+}
+
+.text-size-small {
+  font-size: 0.875rem;
+}
+
+.text-size-regular {
+  font-size: 1rem;
+}
+
+/* -------------------------TEXT-SIZE-MEDIUM------------------------- */
+.text-size-medium {
+  font-size: 1.25rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .text-size-medium {
+    font-size: 1.5rem;
+  }
+}
+
+/* -------------------------TEXT-SIZE-LARGE------------------------- */
+.text-size-large {
+  font-size: 1.5rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .text-size-large {
+    font-size: 2rem;
+  }
+}
+
+/* -------------------------TEXT MAX-WIDTH BASED ON CH UNIT------------------------- */
+@media (min-width: 35.5rem) {
+  p {
+    max-width: 80ch;
+  }
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* TEXT STYLE
+* ----------------------------------------------------------------------------------------------------
+*/
+.text-style-strikethrough {
+  text-decoration: line-through;
+}
+
+.text-style-italic {
+  font-style: italic;
+}
+
+.text-style-muted {
+  opacity: 0.6;
+}
+
+.text-style-allcaps {
+  text-transform: uppercase;
+}
+
+.text-style-nowrap {
+  white-space: normal;
+}
+
+.text-style-link {
+  text-decoration: underline;
+}
+
+/* .text-style-quote {} */
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* TEXT WEIGHT
+* ----------------------------------------------------------------------------------------------------
+*/
+.text-weight-xbold {
+  font-weight: 800;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+.text-weight-semibold {
+  font-weight: 600;
+}
+
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-normal {
+  font-weight: 400;
+}
+
+.text-weight-light {
+  font-weight: 300;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* TEXT ALIGNMENT
+* ----------------------------------------------------------------------------------------------------
+*/
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* TEXT COLOR
+* ----------------------------------------------------------------------------------------------------
+*/
+.text-color-primary {
+  color: #f4f4f4;
+}
+
+.text-color-secundary {
+  color: #000;
+}
+
+.text-color-grey {
+  color: grey;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* BACKGROUND
+* ----------------------------------------------------------------------------------------------------
+*/
+.background-color-primary {
+  background-color: #000;
+}
+
+.background-color-secondary {
+  background-color: #f5f5f5;
+}
+
+.background-color-tertiary {
+  background-color: #fff;
+}
+
+/* .background-color-alternate {} */
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* BUTTON
+* ----------------------------------------------------------------------------------------------------
+*/
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  border-width: 0px;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  background-color: #0f62fe;
+  color: #fff;
+}
+
+.is-small {
+  padding-inline: 1.25rem;
+  padding-block: 0.5rem;
+}
+
+.is-large {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+.invert-colors {
+  color: #0f62fe;
+  background-color: #fff;
+}
+
+.is-secondary {
+  background-color: #6f6f6f;
+}
+
+/* .is-text {} */
+
+.is-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* ICON
+* ----------------------------------------------------------------------------------------------------
+*/
+/* .icon-height-small {} */
+
+/* .icon-height-medium {} */
+
+/* .icon-height-large {} */
+
+/* .icon-1x1-small {} */
+
+/* .icon-1x1-medium {} */
+
+/* .icon-1x1-large {} */
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* FORM-TEXT-INPUT
+* ----------------------------------------------------------------------------------------------------
+*/
+.form-text-input {
+  min-height: 3rem;
+  height: 100%;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  background-color: #262626;
+  color: #f4f4f4;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-bottom-color: hsla(0, 0.00%, 43.53%, 1.00);
+}
+
+.form-text-input:focus {
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-color: hsla(0, 0.00%, 95.69%, 1.00);
+}
+
+.text-area {
+  min-height: 8rem;
+}
+
+/*
+* ----------------------------------------------------------------------------------------------------
+* HIDE
+* ----------------------------------------------------------------------------------------------------
+*/
+.hide {
+  display: none !important;
+}
+
+/* mobile-landscape breakpoint */
+@media (min-width: 35.5rem) {
+  .hide-mobile-landscape {
+    display: none !important;
+  }
+}
+
+/* tablet breakpoint */
+@media (min-width: 48rem) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 64rem) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* -------------------------INVERSE CASCADE------------------------- */
+/* tablet breakpoint */
+@media (max-width: 48rem) {
+  .hide-inverse-tablet {
+    display: none !important;
+  }
+}
+
+/* mobile-landscape breakpoint */
+@media (max-width: 35.5rem) {
+  .hide-inverse-mobile-landscape {
+    display: none !important;
+  }
+}
+
+/* mobile breakpoint */
+@media (max-width: 20rem) {
+  .hide-inverse-mobile {
+    display: none !important;
+  }
+}
