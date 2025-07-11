@@ -5,8 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build:css": "postcss ./src/ngh-style-system.css -o ./dist/ngh-style-system.min.css",
-    "build:docs": "vite build"
+    "build": "postcss ./src/ngh-style-system.css -o ./dist/ngh-style-system.min.css"
   },
   "keywords": [],
   "author": "",
